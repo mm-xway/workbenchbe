@@ -23,7 +23,7 @@ module.exports = {
 	baseurl: 'http://localhost',
 
 	// This is the port the service will be bound to. Defaults to 8080
-	port: process.env.PORT,
+	port: process.env.PORT || 9095,
 
 	// Enabling this property will print out the process.env at startup time
 	printEnvVars: false,
@@ -68,7 +68,7 @@ module.exports = {
 	// If you wish any path that is not bound to `apiPrefix` to be accessible without
 	// authentication, then you can explicitly add them to `public` paths.
 	accessControl: {
-		apiPrefixSecurity: 'basic', // none | basic | apikey | ldap | plugin
+		apiPrefixSecurity: 'none', // none | basic | apikey | ldap | plugin
 		public: []
 	},
 

@@ -1,0 +1,35 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Subscriptions API",
+    "version": "1.0",
+    "description": "Get Customer subcriptions"
+  },
+  "host": "apimdemo.centralindia.cloudapp.azure.com",
+  "paths": {
+    "/{customer}/products": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "description": "Get all products subscribed by a customer",
+        "operationId": "getcustomerproducts"
+      },
+      "parameters": [
+        {
+          "name": "customer",
+          "in": "path",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  },
+  "basePath": "/subscriptions"
+}
